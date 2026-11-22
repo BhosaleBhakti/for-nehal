@@ -1,0 +1,583 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Nehal 💗</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffe0ed, #e8ddff, #fff0f5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #e78bb5;
+    pointer-events: none;
+    animation: float 8s linear forwards;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 0; }
+    20% { opacity: 0.8; }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255,255,255,0.88);
+    padding: 35px 25px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(190,120,160,0.2);
+    position: relative;
+    z-index: 1;
+}
+
+h1, h2 {
+    color: #c45f91;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #684e60;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.emoji {
+    font-size: 55px;
+    margin: 20px;
+}
+
+button {
+    background: #d978a4;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #b95887;
+    transform: scale(1.05);
+}
+
+.block {
+    display: none;
+    animation: appear 0.8s ease;
+}
+
+.block.active {
+    display: block;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.small {
+    color: #a77d99;
+    font-size: 13px;
+}
+
+.final {
+    font-size: 18px;
+    color: #bd5b91;
+    font-weight: bold;
+}
+
+/* Simple audio player */
+.music {
+    margin: 5px auto 30px;
+    padding: 15px;
+    background: #fff0f6;
+    border-radius: 15px;
+}
+
+.music h2 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.music audio {
+    width: 100%;
+    max-width: 320px;
+    margin: 8px auto;
+}
+
+#yesAnswer, #noAnswer {
+    display: none;
+    margin-top: 25px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- MUSIC PLAYER: VISIBLE ON EVERY PAGE -->
+    <div class="music">
+        <h2>A little song for you 🎵</h2>
+        <p class="small">Just something good I think. 💗</p>
+
+        <audio controls loop>
+            <source src="A_thousand_years_karaoke(48k).mp3" type="audio/mpeg">
+          
+        </audio>
+
+        <p class="small">A little music while you read ♡</p>
+    </div>
+
+
+    <!-- BLOCK 1 -->
+    <section class="block active" id="block1">
+
+        <h1>Hey Nehal! 💗</h1>
+
+        <p>I have something little to tell you...</p>
+
+        <div class="emoji">💌</div>
+
+        <p class="small">
+            Don't worry, it's not a scary surprise! :)
+        </p>
+
+        <button onclick="nextBlock(2)">
+            Open my little letter ♡
+        </button>
+
+    </section>
+
+
+    <!-- BLOCK 2 -->
+    <section class="block" id="block2">
+
+        <h2>First of all... 🌷</h2>
+
+        <p>
+            I am not going to say block me.
+            I am not here to disturb you.
+            I just want to tell you something
+            that has been on my mind.
+        </p>
+
+        <p>
+            Sometimes I don't know what to say,
+            so I thought writing it here would
+            be a little easier.
+        </p>
+
+        <div class="emoji">🥹</div>
+
+        <button onclick="nextBlock(3)">
+            There's something more...
+        </button>
+
+    </section>
+
+
+    <!-- BLOCK 3 -->
+    <section class="block" id="block3">
+
+        <h2>SOOO.... 💗</h2>
+
+        <p>
+            I always used to say that I was just passing
+            time on calls with you, but honestly...
+        </p>
+
+        <p>
+            I used to take different people's names and
+            make excuses just to call you. I even said
+            that they wouldn't pick up, so I decided
+            to call you instead.
+        </p>
+
+        <p>
+            But that was completely fake. The truth is,
+            I genuinely wanted to call you and talk to you.
+            I was just afraid of showing that I actually
+            wanted to talk to you.
+        </p>
+
+        <p>
+            I kept using the words "timepass" again and
+            again because I was scared. What if things
+            became awkward? What if you misunderstood me?
+            And maybe because you had also used that word
+            sometimes, I started using it too.
+        </p>
+
+        <p>
+            But honestly, those calls were never just
+            timepass for me. I genuinely enjoyed talking
+            to you. 🥹
+        </p>
+
+        <div class="emoji">🥹💗</div>
+
+        <button onclick="nextBlock(4)">
+            There's something more...
+        </button>
+
+    </section>
+
+
+    <!-- BLOCK 4 -->
+    <section class="block" id="block4">
+
+        <h2>A little confession ❤️</h2>
+
+        <p>Yup, Nehal... I like you.</p>
+
+        <p>
+            But honestly, I am afraid of telling you
+            this because I don't know how you feel
+            about me.
+        </p>
+
+        <p>
+            I don't know whether you are with someone,
+            whether I am bothering you, or whether
+            I am just a casual friend or a time pass.
+        </p>
+
+        <p>
+            Whatever place I have in your life,
+            I am okay with that.
+        </p>
+
+        <div class="emoji">💗</div>
+
+        <button onclick="nextBlock(5)">
+            One small request...
+        </button>
+
+    </section>
+
+
+    <!-- BLOCK 5 -->
+    <section class="block" id="block5">
+
+        <h2>Please understand this... 🫶🏻</h2>
+
+        <p>
+            I am not asking you to talk to me every
+            single day.
+        </p>
+
+        <p>
+            If you are busy and cannot talk for
+            two days, that's completely okay.
+            I understand.
+        </p>
+
+        <p>
+            But please don't ignore me.
+            When you suddenly stop talking,
+            I feel like I am nothing more than
+            a stranger to you.
+        </p>
+
+        <p>
+            Even if I am just a friend to you,
+            I am okay with that.
+            I just don't want to lose our connection, dear.
+        </p>
+
+        <div class="emoji">🤍</div>
+
+        <button onclick="nextBlock(6)">
+            And about your question...
+        </button>
+
+    </section>
+
+
+    <!-- BLOCK 6 -->
+    <section class="block" id="block6">
+
+        <h2>One more thing! 💌</h2>
+
+        <p>
+            Remember when you asked me,
+            "Do you want me to block you?"
+        </p>
+
+        <p>My answer is NOOO! NEVER.</p>
+
+        <p>
+            Every time I think about telling you
+            that I like you, I get scared.
+            What if things become awkward?
+            What if I lose the friendship we already have?
+        </p>
+
+        <p>
+            That's why I keep changing my mind.
+        </p>
+
+        <div class="emoji">🥺</div>
+
+        <button onclick="nextBlock(7)">
+            Last thing, promise!
+        </button>
+
+    </section>
+
+
+    <!-- BLOCK 7 -->
+    <section class="block" id="block7">
+
+        <h2>And finally, Nehal... 🌙</h2>
+
+        <p>
+            I am not proposing to you.
+            I am not expecting you to feel
+            the same way.
+        </p>
+
+        <p>
+            I don't want any promises.
+            I just want a little conversation,
+            a little care and a genuine connection.
+        </p>
+
+        <p>
+            If I am simply your friend,
+            that's okay too.
+        </p>
+
+        <p>
+            I just don't want to lose you
+            because of my feelings.
+        </p>
+
+        <div class="emoji">💗</div>
+
+        <p class="final">
+            No pressure. No expectations.
+            Just a little honesty from my side.
+        </p>
+
+        <p>Take care, Nehal! 🫶🏻</p>
+
+        <button onclick="nextBlock(8)">
+            One last surprise ♡
+        </button>
+
+    </section>
+
+
+    <!-- BLOCK 8 -->
+    <section class="block" id="block8">
+
+        <h1>Thank you for reading! 💕</h1>
+
+        <div class="emoji">🌸💗🌸</div>
+
+        <p class="final">
+            Whatever our bond is,
+            I hope it stays genuine.
+        </p>
+
+        <p>
+            And please don't forget to smile!
+        </p>
+
+        <p class="small">
+            Made with a little courage and a lot of feelings ♡
+        </p>
+
+        <button onclick="nextBlock(9)">
+            One last question ♡
+        </button>
+
+    </section>
+
+
+    <!-- FINAL BLOCK -->
+    <section class="block" id="block9">
+
+        <h2>One last question, Nehal... 🥹💗</h2>
+
+        <p>
+            Before you leave, I just want to ask you
+            one little question.
+        </p>
+
+        <h2>Do you really like me, even just a little bit? 🥺</h2>
+
+        <button onclick="showAnswer('yes')">
+            Yesss 💗
+        </button>
+
+        <button onclick="showAnswer('no')">
+            No 🙈
+        </button>
+
+        <div id="yesAnswer">
+
+            <p>Awww, thank you, dude! 🥹❤️</p>
+
+            <p>You just made me smile!</p>
+
+            <p>
+                It's just that we've known each other
+                for almost not 4 its 5 years now, and that's
+                a really long time to build a friendship.
+            </p>
+
+            <p>
+                I genuinely enjoy your company,
+                our random conversations and all
+                those little moments.
+            </p>
+
+            <p>
+                I don't want to lose this friendship.
+                No one can take your place in my life.
+            </p>
+
+            <p class="final">
+                You're one of the best buddies
+                I've ever had. ❤️
+            </p>
+
+            <div class="emoji">🫂🌷💗</div>
+
+            <p class="small">
+                Thank you for being you, Nehal.
+                That's all. Take care! ♡ CAN you share ss on wp to know your ans it's not praposal but i want to  know am i on wrong path
+            </p>  
+
+        </div>
+
+        <div id="noAnswer">
+
+            <p>
+                That's completely okay, dude! ❤️
+            </p>
+
+            <p>
+                Thank you for being honest with me.
+                I won't take it personally.
+            </p>
+
+            <p>
+                I still value our friendship
+                and all the memories we've made.
+            </p>
+
+            <p class="final">
+                You're still one of my best buddies! 🫶🏻
+            </p>
+
+            <div class="emoji">🌷🤍</div>
+
+            <p class="small">
+                Thank you for reading everything. Thats not my praposal
+                Take care, Nehal! ♡  CAN you share ss on wp to know your ans it's not praposal but i want to  know am i on wrong path
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<script>
+
+function nextBlock(number) {
+
+    document.querySelectorAll(".block").forEach(block => {
+        block.classList.remove("active");
+    });
+
+    const target = document.getElementById("block" + number);
+
+    if (target) {
+        target.classList.add("active");
+    }
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+function showAnswer(choice) {
+
+    document.getElementById("yesAnswer").style.display =
+        choice === "yes" ? "block" : "none";
+
+    document.getElementById("noAnswer").style.display =
+        choice === "no" ? "block" : "none";
+
+}
+
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+    heart.innerHTML = "♥";
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 20) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 10000);
+
+}
+
+setInterval(createHeart, 500);
+
+</script>
+
+</body>
+</html>
